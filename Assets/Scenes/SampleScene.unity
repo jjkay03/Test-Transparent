@@ -363,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9924754f3df0f7041a00f97f4ad06c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stayOnTop: 1
 --- !u!4 &699706998
 Transform:
   m_ObjectHideFlags: 0
