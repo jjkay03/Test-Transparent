@@ -1,15 +1,15 @@
 using System;
 using System.Runtime.InteropServices;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class TransparentWindow : MonoBehaviour
-{
+public class TransparentWindow : MonoBehaviour {
     /* -------------------------------- Variables ------------------------------- */
     const int GWL_EXSTYLE = -20;
     const int WS_EX_LAYERED = 0x80000;
     const int WS_EX_TRANSPARENT = 0x20;
     const int LWA_COLORKEY = 0x00000001;
+
+    private static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
 
     [StructLayout(LayoutKind.Sequential)]
     struct MARGINS {
@@ -58,7 +58,7 @@ public class TransparentWindow : MonoBehaviour
             
         
         #endif
-            // Run application when its in the background (not selected)
+            // Run application when it's in the background (not selected)
             Application.runInBackground = true;
     }
 }
